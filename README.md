@@ -1,233 +1,219 @@
 # Pappus — Generative Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Pappus-Generative-Art)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> **Generative fractal tree art with 12 unique color palettes.** Each refresh creates a unique Pappus tree with randomly selected colors, branch patterns, and organic growth. Named after the Pappus tree fractal pattern.
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://reyrove.github.io/Pappus-Generative-Art" target="_blank">
-    <img src="demo-screenshot.jpg" alt="Pappus Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
-  </a>
-  <br><br>
-  <a href="https://reyrove.github.io/Pappus-Generative-Art" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
-  </a>
-  <br>
-  <em>Click the image or button to experience the generative art</em>
-</div>
-
-## 👕 Apparel Preview
-
-<div align="center">
-  <img src="Pappus.jpg" alt="Pappus on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br>
-  <em>Pappus artwork printed on a T-shirt</em>
-</div>
-
-## ✨ Features
-
-- **Fractal Tree** — Recursive branching algorithm with 9 levels of depth
-- **12 Color Palettes** — Unique combinations of background, body, and hair colors
-- **Organic Growth** — Random branching patterns create natural-looking trees
-- **Color Gradients** — Smooth transitions between body and hair colors
-- **Unique Every Time** — Random seed ensures each composition is one-of-a-kind
-- **Save & Share** — Download as PNG
-- **Apparel Mode** — Preview artwork on a T-shirt mockup
-- **Responsive** — Works on desktop, tablet, and mobile
-- **Pure JavaScript** — Built without external libraries
-- **Keyboard Shortcuts**:
-  - `R` — Regenerate
-  - `S` — Save image
-  - `T` — Toggle apparel view
-  - `Space` — Regenerate
-
-## 🎨 Artwork Details
-
-| Parameter | Range | Description |
-|-----------|-------|-------------|
-| **Tree Depth** | 9 levels | Recursive branching depth |
-| **Branch Sub-branches** | 1–12 | Random branches per node |
-| **Color Palettes** | 12 options | Background, Body, Hair colors |
-| **Branch Angle** | Variable | Random angle variation |
-| **Branch Length** | 0.618× | Fibonacci-like scaling |
-| **Branch Width** | 0.618× | Proportional scaling |
-| **Start Position** | Random | Tree base location |
-
-## 🎯 Color Palettes
-
-### Background Colors
-| Name | Hex |
-|------|-----|
-| Cornsilk | #FFF8DC |
-| Wheat | #F5DEB3 |
-| Beige | #F5F5DC |
-| Gainsboro | #DCDCDC |
-| Snow | #FFFAFA |
-| LightCyan | #E0FFFF |
-| Bisque | #FFE4C4 |
-| LavenderBlush | #FFF0F5 |
-| MistyRose | #FFE4E1 |
-| Plum | #DDA0DD |
-| AliceBlue | #F0F8FF |
-| Pastel Light Blue | #D5D6EA |
-
-### Body Colors
-| Name | Hex |
-|------|-----|
-| Sienna | #A0522D |
-| DarkOliveGreen | #556B2F |
-| SteelBlue | #4682B4 |
-| SaddleBrown | #8B4513 |
-| Maroon | #800000 |
-| Chocolate | #D2691E |
-| Purple Iris | #571B7E |
-| Pastel Violet | #D291BC |
-| Pastel Orange | #F8B88B |
-| Dark Yellow | #8B8000 |
-| Neon Yellow | #FFFF33 |
-| Dragon Green | #6AFB92 |
-
-### Hair Colors
-| Name | Hex |
-|------|-----|
-| MediumSpringGreen | #00FA9A |
-| CadetBlue | #5F9EA0 |
-| PowderBlue | #B0E0E6 |
-| SandyBrown | #F4A460 |
-| Silver | #C0C0C0 |
-| HoneyDew | #F0FFF0 |
-| RosyBrown | #BC8F8F |
-| Bright Turquoise | #16E2F5 |
-| Neon Gold | #FDBD01 |
-| Mahogany | #C04000 |
-| Deep Red | #800517 |
-| Blush Red | #E56E94 |
-
-## 🚀 Quick Start
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/reyrove/Pappus-Generative-Art.git
-
-# Navigate to the directory
-cd Pappus-Generative-Art
-
-# Open in browser
-open index.html
-# or use a live server
-```
-
-### Deploy to GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select branch `main` and root folder
-4. Your site will be live at `https://reyrove.github.io/Pappus-Generative-Art`
-
-## 🧠 How It Works
-
-The artwork is generated using a recursive fractal tree algorithm:
-
-1. **Setup**:
-   - Random background color from 12 options
-   - Random body color from 12 options
-   - Random hair color from 12 options
-   - Random starting position and angle
-
-2. **Tree Generation**:
-   - Start with a single branch at the base
-   - Each branch splits into 1–12 sub-branches
-   - Branch length and width scale by 0.618× (golden ratio inverse)
-   - Random angle variation creates organic shapes
-   - Recurses 9 levels deep
-
-3. **Rendering**:
-   - Hair color for outer branches (depth ≤ 1)
-   - Body color for inner branches (depth > 1)
-   - Creates a natural color gradient from center to tips
-   - Smooth, rounded line caps
-
-## 📁 File Structure
-
-```
-Pappus-Generative-Art/
-├── index.html          # Main application (all-in-one)
-├── Pappus.jpg          # T-shirt mockup image
-├── fav.svg             # Favicon
-├── demo-screenshot.jpg # Website demo screenshot
-├── README.md           # This file
-└── LICENSE             # MIT License
-```
-
-## 🛠️ Tech Stack
-
-- **Pure JavaScript** — No external libraries
-- **Canvas API** — 2D rendering
-- **CSS Flexbox/Grid** — Responsive layout
-- **GitHub Pages** — Hosting
-
-## 🎯 Interactive Controls
-
-| Action | Keyboard | Button |
-|--------|----------|--------|
-| Regenerate | `R` or `Space` | Click "regenerate" |
-| Save Image | `S` | Click "regenerate" |
-| Toggle Apparel | `T` | Click "apparel" |
-
-## 🎨 The Creative Process
-
-### Fractal Tree Algorithm
-The Pappus tree uses a recursive branching algorithm inspired by natural tree growth. Each branch splits into multiple sub-branches with random angles, creating organic and unique patterns every time.
-
-### Golden Ratio Scaling
-Branch length and width scale by 0.618× (the inverse of the golden ratio) at each level, creating mathematically pleasing proportions that mimic natural growth patterns.
-
-### Color Selection
-Three independent color palettes (background, body, and hair) are randomly selected from 12 options each, creating 1,728 possible color combinations. The body and hair colors blend naturally through the tree structure.
-
-### Organic Variation
-Random angles, branch counts, and starting positions ensure that each generated tree is completely unique, even with the same color palette.
-
-## 📱 Responsive Design
-
-The application automatically adapts to:
-- Desktop screens
-- Tablets
-- Mobile phones
-- Landscape orientation
-- Various aspect ratios
-- Small screens (down to 380px wide)
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
-### Ideas for Contributions:
-- Additional color palettes
-- New tree growth patterns
-- Animation features
-- Interactive controls
-- Performance optimizations
-- More apparel mockups
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by fractal tree algorithms and natural patterns
-- Named after the Pappus tree fractal
-- Special thanks to the creative coding community
+> A seed-based generative system for fractal tree compositions.  
+> A reproducible catalogue of computational branching studies.
 
 ---
 
-**Built with ❤️ and fractal dreams**
+## What is this?
+
+**Pappus** is a generative design system built on fractal branching. A tree grows from a single seeded point, splitting at each generation into one to eleven sub-branches — each scaled by the golden ratio, each turned by a bounded angle, until the field is filled with an organic, natural form.
+
+Every artwork in this catalogue is defined by a single numeric seed. The same seed always produces the identical composition — making each piece **traceable, reproducible, and licensable** across textile, print, and apparel applications.
+
+Named for the seed-bearing tuft of a flower — the small, feathered structure carried on the wind — **Pappus** reframes branching growth as a textile.
+
+---
+
+## Live
+
+🌐 **[View the catalogue →](https://reyrove.github.io/Pappus/)**
+
+---
+
+## The System
+
+The generator is a single-layer system — a recursive tree whose branches, angles, and colours are all seeded:
+
+| Layer | Description |
+|-------|-------------|
+| **Ground** | One of 12 pastel background tones, chosen per seed. |
+| **Tree** | A recursive branching structure grown from a seeded point, split 1–11 ways per node, 9 levels deep. |
+
+Both layers are driven by the same seed, ensuring deterministic output.
+
+### Parameters
+
+- **Recursion depth** — 9 levels
+- **Sub-branches per node** — 1 to 11
+- **Length scale per level** — × 0.618 (golden ratio)
+- **Width scale per level** — × 0.618
+- **Max angle deviation** — 2π/6 (60°)
+- **Start position** — seeded within the lower half of the canvas
+- **Start angle** — `-11π/20` plus a small seeded deviation
+- **Initial length** — `canvas width / 4`
+- **Initial width** — `canvas width / 100`
+- **Colour assignment** — hair colour for tip branches (depth ≤ 1), body colour for interior branches
+
+---
+
+## Structure
+
+```
+Pappus/
+├── index.html              ← Full catalogue (single-file)
+├── images/
+│   ├── fav.svg
+│   ├── pappus-tote.png
+│   ├── pappus-cushion.png
+│   └── ...
+├── Pappus.jpg              ← Apparel mockup
+└── README.md
+```
+
+The entire project is contained in a single `index.html` — no build step, no dependencies, no framework. Open it in any modern browser.
+
+---
+
+## Features
+
+- **Seed-based generation** — every composition is deterministic and reproducible
+- **Live catalogue** — cover, statement, plate, surfaces, process, archive, commission sections
+- **Multiple surfaces** — print, scarf, textile, wallpaper — all rendered from the same seed
+- **Archive of 8 seeds** — click any plate to load it into the main view
+- **PNG export** — download any composition directly from the browser
+- **Keyboard shortcuts** — `R` for new seed, `S` to save
+- **Legal modal** — licensing, terms, and credits built in
+- **Responsive** — works on desktop, tablet, and mobile
+- **Mobile-first navbar** — horizontally scrollable with fade hint
+
+---
+
+## Usage
+
+### Generate a new composition
+
+Click **New Seed** or press `R`.
+
+### Download the current composition
+
+Click **Download** or press `S`.
+
+### Load a seed from the archive
+
+Click any plate in the **Archive** section.
+
+---
+
+## Color System
+
+Every composition is drawn from three curated palettes, each seeded independently:
+
+**Background — 12 pastel tones**
+
+| Hex | Name |
+|-----|------|
+| `#FFF8DC` | Cornsilk |
+| `#F5DEB3` | Wheat |
+| `#F5F5DC` | Beige |
+| `#DCDCDC` | Gainsboro |
+| `#FFFAFA` | Snow |
+| `#E0FFFF` | Light Cyan |
+| `#FFE4C4` | Bisque |
+| `#FFF0F5` | Lavender Blush |
+| `#FFE4E1` | Misty Rose |
+| `#DDA0DD` | Plum |
+| `#F0F8FF` | Alice Blue |
+| `#D5D6EA` | Pastel Light Blue |
+
+**Body — 12 saturated tones**
+
+| Hex | Name |
+|-----|------|
+| `#A0522D` | Sienna |
+| `#556B2F` | Dark Olive Green |
+| `#4682B4` | Steel Blue |
+| `#8B4513` | Saddle Brown |
+| `#800000` | Maroon |
+| `#D2691E` | Chocolate |
+| `#571B7E` | Purple Iris |
+| `#D291BC` | Pastel Violet |
+| `#F8B88B` | Pastel Orange |
+| `#8B8000` | Dark Yellow |
+| `#FFFF33` | Neon Yellow |
+| `#6AFB92` | Dragon Green |
+
+**Hair — 12 bright / neutral tones**
+
+| Hex | Name |
+|-----|------|
+| `#00FA9A` | Medium Spring Green |
+| `#5F9EA0` | Cadet Blue |
+| `#B0E0E6` | Powder Blue |
+| `#F4A460` | Sandy Brown |
+| `#C0C0C0` | Silver |
+| `#F0FFF0` | Honeydew |
+| `#BC8F8F` | Rosy Brown |
+| `#16E2F5` | Bright Turquoise |
+| `#FDBD01` | Neon Gold |
+| `#C04000` | Mahogany |
+| `#800517` | Deep Red |
+| `#E56E94` | Blush Red |
+
+Because all three axes and the branching itself are seeded, no two compositions share the same rhythm of branch and hue.
+
+---
+
+## Technical Notes
+
+- Pure vanilla JavaScript — no libraries
+- Canvas 2D rendering
+- Custom xorshift random generator for deterministic seeds
+- Device-pixel-ratio aware rendering
+- Fully static rendering — one seed produces one composition, no animation loops
+- Single `renderStatic()` function drives the cover, plate, framed print, all four surfaces, and all eight archive thumbnails
+- Recursive fractal tree with golden-ratio scaling (0.618) at every level
+- `prefers-reduced-motion` respected
+
+---
+
+## About
+
+**Pappus** is a project by [Reyhaneh Daneshdoost](https://reyrove.github.io/) — an Iranian-born artist working at the intersection of classical textile logic and generative systems.
+
+The work begins with a simple observation: the woven surface — repetitive, mathematically structured, infinitely variable — has always been a form of computation, long before computers.
+
+**Pappus** is an attempt to render that logic visible.
+
+> *A tree is a single stroke that remembers every branch it has ever grown.*
+
+---
+
+## Licensing
+
+All compositions are seed-documented and available for licensing across textile, surface, and apparel applications.
+
+For commercial use, custom editions, or exclusive rights:
+
+📧 **reyhanehdaneshdoost@gmail.com**
+
+See the **Licensing** section in the live catalogue for details.
+
+---
+
+## Links
+
+- 🌐 [Website](https://reyrove.github.io/)
+- 📷 [Instagram](https://www.instagram.com/rey._.rove/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/reyhaneh-daneshdoost-730481160/)
+- 🐦 [X](https://x.com/reyrove)
+
+---
+
+## Credits
+
+**Design & Generative System**  
+Reyhaneh Daneshdoost
+
+**Typefaces**  
+Cormorant Garamond · DM Mono
+
+**Edition**  
+Pappus — Autumn 2026
+
+---
+
+<p align="center">
+  <em>Generative Fractal Tree</em><br />
+  <sub>© Reyrove Studio · All compositions reproducible by seed</sub>
+</p>
